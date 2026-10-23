@@ -1,19 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int fastExponentiation(int base, int exponent) {
-    if (exponent == 0) {
+int fastExponentiation(int base, int exponent)
+{
+    if (exponent == 0)
+    {
         return 1;
     }
     int half = fastExponentiation(base, exponent / 2);
-    if (exponent % 2 == 0) {
+    if (exponent % 2 == 0)
+    {
         return half * half;
-    } else {
+    }
+    else
+    {
         return half * half * base;
     }
 }
 
-int main() {
+int main()
+{
     int base, exponent;
     cout << "Enter base: ";
     cin >> base;
